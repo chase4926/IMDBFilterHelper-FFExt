@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/css" href="chrome://global/skin/" ?>
+<?xml-stylesheet type="text/css"
+  href="chrome://imdbfilterhelper/skin/browserOverlay.css" ?>
+
+<!DOCTYPE overlay SYSTEM
+  "chrome://imdbfilterhelper/locale/browserOverlay.dtd">
+
+<overlay id="imdbfilterhelper-browser-overlay"
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+  <script type="application/x-javascript"
+    src="chrome://imdbfilterhelper/content/browserOverlay.js" />
+
+  <stringbundleset id="stringbundleset">
+    <stringbundle id="imdbfilterhelper-string-bundle"
+      src="chrome://imdbfilterhelper/locale/browserOverlay.properties" />
+  </stringbundleset>
+
+  <toolbarpalette id="BrowserToolbarPalette">
+    <toolbarbutton id="imdbfilterhelper-main-button"
+      class="toolbarbutton-1 chromeclass-toolbar-additional" 
+      label="IMDB Filter Helper"
+      tooltiptext="IMDB Filter Helper"
+      image="chrome://imdbfilterhelper/skin/imdbfilterhelper.png"
+      type="menu">
+      <menupopup>
+        <menu id="imdbfilterhelper-type-menu" label="Filter: Type"
+          accesskey="T">
+          <menupopup>
+            <menuitem label="All" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(0);"/>
+            <menuitem label="Feature Films" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(1);"/>
+            <menuitem label="Short Films" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(2);"/>
+            <menuitem label="TV Series" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(3);"/>
+            <menuitem label="TV Episodes" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(4);"/>
+            <menuitem label="Videos" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(5);"/>
+            <menuitem label="Video Games" name="imdbfilterhelper-type-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setType(6);"/>
+          </menupopup>
+        </menu>
+        <menu id="imdbfilterhelper-year-menu" label="Filter: Year"
+          accesskey="Y">
+          <menupopup>
+            <menuitem label="All" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(-1)"/>
+            <menuitem label="2014" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2014)"/>
+            <menuitem label="2013" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2013)"/>
+            <menuitem label="2012" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2012)"/>
+            <menuitem label="2011" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2011)"/>
+            <menuitem label="2010" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2010)"/>
+            <menuitem label="2009" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2009)"/>
+            <menuitem label="2008" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2008)"/>
+            <menuitem label="2007" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2007)"/>
+            <menuitem label="2006" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2006)"/>
+            <menuitem label="2005" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2005)"/>
+            <menuitem label="2004" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2004)"/>
+            <menuitem label="2003" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2003)"/>
+            <menuitem label="2002" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2002)"/>
+            <menuitem label="2001" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2001)"/>
+            <menuitem label="2000" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(2000)"/>
+            <menuitem label="1999" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1999)"/>
+            <menuitem label="1998" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1998)"/>
+            <menuitem label="1997" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1997)"/>
+            <menuitem label="1996" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1996)"/>
+            <menuitem label="1995" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1995)"/>
+            <menuitem label="1994" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1994)"/>
+            <menuitem label="1993" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1993)"/>
+            <menuitem label="1992" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1992)"/>
+            <menuitem label="1991" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1991)"/>
+            <menuitem label="1990" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1990)"/>
+            <menuitem label="1989" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1989)"/>
+            <menuitem label="1988" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1988)"/>
+            <menuitem label="1987" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1987)"/>
+            <menuitem label="1986" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1986)"/>
+            <menuitem label="1985" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1985)"/>
+            <menuitem label="1984" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1984)"/>
+            <menuitem label="1983" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1983)"/>
+            <menuitem label="1982" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1982)"/>
+            <menuitem label="1981" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1981)"/>
+            <menuitem label="1980" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1980)"/>
+            <menuitem label="1979" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1979)"/>
+            <menuitem label="1978" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1978)"/>
+            <menuitem label="1977" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1977)"/>
+            <menuitem label="1976" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1976)"/>
+            <menuitem label="1975" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1975)"/>
+            <menuitem label="1974" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1974)"/>
+            <menuitem label="1973" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1973)"/>
+            <menuitem label="1972" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1972)"/>
+            <menuitem label="1971" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1971)"/>
+            <menuitem label="1970" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1970)"/>
+            <menuitem label="1969" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1969)"/>
+            <menuitem label="1968" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1968)"/>
+            <menuitem label="1967" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1967)"/>
+            <menuitem label="1966" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1966)"/>
+            <menuitem label="1965" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1965)"/>
+            <menuitem label="1964" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1964)"/>
+            <menuitem label="1963" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1963)"/>
+            <menuitem label="1962" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1962)"/>
+            <menuitem label="1961" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1961)"/>
+            <menuitem label="1960" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1960)"/>
+            <menuitem label="1959" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1959)"/>
+            <menuitem label="1958" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1958)"/>
+            <menuitem label="1957" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1957)"/>
+            <menuitem label="1956" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1956)"/>
+            <menuitem label="1955" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1955)"/>
+            <menuitem label="1954" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1954)"/>
+            <menuitem label="1953" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1953)"/>
+            <menuitem label="1952" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1952)"/>
+            <menuitem label="1951" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1951)"/>
+            <menuitem label="1950" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1950)"/>
+            <menuitem label="1949" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1949)"/>
+            <menuitem label="1948" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1948)"/>
+            <menuitem label="1947" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1947)"/>
+            <menuitem label="1946" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1946)"/>
+            <menuitem label="1945" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1945)"/>
+            <menuitem label="1944" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1944)"/>
+            <menuitem label="1943" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1943)"/>
+            <menuitem label="1942" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1942)"/>
+            <menuitem label="1941" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1941)"/>
+            <menuitem label="1940" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1940)"/>
+            <menuitem label="1939" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1939)"/>
+            <menuitem label="1938" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1938)"/>
+            <menuitem label="1937" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1937)"/>
+            <menuitem label="1936" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1936)"/>
+            <menuitem label="1935" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1935)"/>
+            <menuitem label="1934" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1934)"/>
+            <menuitem label="1933" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1933)"/>
+            <menuitem label="1932" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1932)"/>
+            <menuitem label="1931" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1931)"/>
+            <menuitem label="1930" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1930)"/>
+            <menuitem label="1929" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1929)"/>
+            <menuitem label="1928" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1928)"/>
+            <menuitem label="1927" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1927)"/>
+            <menuitem label="1926" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1926)"/>
+            <menuitem label="1925" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1925)"/>
+            <menuitem label="1924" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1924)"/>
+            <menuitem label="1923" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1923)"/>
+            <menuitem label="1922" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1922)"/>
+            <menuitem label="1921" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1921)"/>
+            <menuitem label="1920" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1920)"/>
+            <menuitem label="1919" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1919)"/>
+            <menuitem label="1918" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1918)"/>
+            <menuitem label="1917" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1917)"/>
+            <menuitem label="1916" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1916)"/>
+            <menuitem label="1915" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1915)"/>
+            <menuitem label="1914" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1914)"/>
+            <menuitem label="1913" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1913)"/>
+            <menuitem label="1912" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1912)"/>
+            <menuitem label="1911" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1911)"/>
+            <menuitem label="1910" name="imdbfilterhelper-year-sel" type="radio" oncommand="ImdbFilterHelper.Filter.setYear(1910)"/>
+          </menupopup>
+        </menu>
+        <menu id="imdbfilterhelper-year-menu" label="Filter: Genre"
+          accesskey="G">
+          <menupopup>
+            <menuitem label="Action" id="imdb-action" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Drama" id="imdb-drama" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Adventure" id="imdb-adventure" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Animation" id="imdb-animation" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Comedies" id="imdb-comedy" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Sci-Fi" id="imdb-sci_fi" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Crime" id="imdb-crime" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Thrillers" id="imdb-thriller" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Fantasy" id="imdb-fantasy" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Mystery" id="imdb-mystery" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Family" id="imdb-family" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Romance" id="imdb-romance" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Sport" id="imdb-sport" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Horror" id="imdb-horror" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="War" id="imdb-war" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Westerns" id="imdb-western" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Reality-TV" id="imdb-reality_tv" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="History" id="imdb-history" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Documentaries" id="imdb-documentary" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Game Shows" id="imdb-game_show" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Music" id="imdb-music" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Biographies" id="imdb-biography" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Musicals" id="imdb-musical" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="News" id="imdb-news" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Talk Shows" id="imdb-talk_show" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+            <menuitem label="Film-Noir" id="imdb-film_noir" name="imdbfilterhelper-genre-sel" type="checkbox"/>
+          </menupopup>
+        </menu>
+<!--
+        <menuitem label="Debug" oncommand="ImdbFilterHelper.Filter.debugPlease(event);"/>
+-->
+        <menuitem label="Search!" oncommand="ImdbFilterHelper.Url.goto();" accesskey="S"/>
+      </menupopup>
+    </toolbarbutton>
+  </toolbarpalette>
+</overlay>
