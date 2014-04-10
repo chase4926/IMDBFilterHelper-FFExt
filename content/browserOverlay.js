@@ -38,11 +38,11 @@ ImdbFilterHelper.Lib = {
 
 
 ImdbFilterHelper.Filter = {
-  debugPlease : function(a_event) {
-    let sandbox = Components.utils.Sandbox(gBrowser.contentWindow,{sandboxPrototype:gBrowser.contentWindow, wantXrays:false});
-    let currenttime = Components.utils.evalInSandbox("document.getElementById('movie_player').getCurrentTime()", sandbox);
-    window.alert(currenttime);
-  },
+  //debugPlease : function(a_event) {
+    //let sandbox = Components.utils.Sandbox(gBrowser.contentWindow,{sandboxPrototype:gBrowser.contentWindow, wantXrays:false});
+    //let currenttime = Components.utils.evalInSandbox("document.getElementById('movie_player').getCurrentTime()", sandbox);
+    //window.alert(currenttime);
+  //},
   
   getGenresString : function() {
     let result_array = new Array();
